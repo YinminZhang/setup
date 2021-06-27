@@ -16,7 +16,9 @@ export ZSH="~/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="frisk"
+POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -114,6 +116,7 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# source ~/.oh-my-zsh/custom/themes/powerlevel10k/internal/icons.zsh
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context os_icon dir dir_writable vcs anaconda)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status time)
@@ -133,4 +136,4 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\uf054"
 # POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='\ufbc0'
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
