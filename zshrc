@@ -15,10 +15,13 @@ export ZSH="~/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="frisk"
+
+# Git status for zsh < 5.1.0
+POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind git-remotebranch git-tagname)
 POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="frisk"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -116,10 +119,12 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # source ~/.oh-my-zsh/custom/themes/powerlevel10k/internal/icons.zsh
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context os_icon dir dir_writable vcs anaconda)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status time)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 POWERLEVEL9K_STATUS_VERBOSE=true
 POWERLEVEL9K_STATUS_OK=true
@@ -128,8 +133,7 @@ POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
 
 POWERLEVEL9K_COLOR_SCHEME='dark'
 
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-
+# DIR Settings
 POWERLEVEL9K_SHORTEN_STRATEGY='truncate_to_first_and_last'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 
@@ -137,3 +141,52 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\uf054"
 # POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='\ufbc0'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=yellow'
+
+# OS icon color
+POWERLEVEL9K_OS_ICON_BACKGROUND='white'
+POWERLEVEL9K_OS_ICON_FOREGROUND='black'
+
+# General Directory Settings
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='blue'
+
+# Home Folder Settings
+POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='blue'
+
+# Home Subfolder Settings
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='blue'
+
+# Etc Directory Settings
+POWERLEVEL9K_DIR_ETC_FOREGROUND='black'
+POWERLEVEL9K_DIR_ETC_BACKGROUND='blue'
+
+# Anaconda Settings
+POWERLEVEL9K_ANACONDA_FOREGROUND='black'
+POWERLEVEL9K_ANACONDA_BACKGROUND='blue'
+
+# VSC Settings
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='green'  # 已修改
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
+# Context color
+
+# # Default User
+# P9K_CONTEXT_DEFAULT_FOREGROUND='black'
+# P9K_CONTEXT_DEFAULT_BACKGROUND='yellow'
+
+# # Root User
+# P9K_CONTEXT_ROOT_FOREGROUND='black'
+# P9K_CONTEXT_ROOT_BACKGROUND='yellow'
+
+# # Sudo User
+# P9K_CONTEXT_SUDO_FOREGROUND='black'
+# P9K_CONTEXT_SUDO_BACKGROUND='yellow'
+
+# # Remote User
+# P9K_CONTEXT_REMOTE_FOREGROUND='black'
+# P9K_CONTEXT_REMOTE_BACKGROUND='yellow'
+
+# # Remote Sudo User
+# P9K_CONTEXT_REMOTE_SUDO_FOREGROUND='black'
+# P9K_CONTEXT_REMOTE_SUDO_BACKGROUND='yellow'
